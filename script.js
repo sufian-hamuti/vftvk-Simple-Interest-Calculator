@@ -2,7 +2,8 @@ function compute()
 {
     var p = document.getElementById("principal").value;
     var range = document.getElementById("textInput").value;
-    var nyears = document.getElementById("years").value;
+    var select = document.getElementById('years');
+    var nyears = select.options[select.selectedIndex].value;
     var result = ((p*range)/100)*nyears;
     var d = new Date();
     var n = d.getFullYear();
@@ -13,4 +14,3 @@ function compute()
 function updateTextInput(val) {
           document.getElementById('textInput').value=val; 
         }
-        
